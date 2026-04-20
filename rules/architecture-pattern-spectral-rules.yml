@@ -1,0 +1,108 @@
+rules:
+  ap-pattern-id-required:
+    description: Pattern must have an id field
+    message: Pattern object must have an id property
+    severity: error
+    given: "$.components.schemas.Pattern.properties"
+    then:
+      field: id
+      function: truthy
+
+  ap-pattern-name-required:
+    description: Pattern must have a name field
+    message: Pattern object must have a name property
+    severity: error
+    given: "$.components.schemas.Pattern.properties"
+    then:
+      field: name
+      function: truthy
+
+  ap-pattern-problem-required:
+    description: Pattern must have a problem statement
+    message: Pattern object must have a problem property
+    severity: warn
+    given: "$.components.schemas.Pattern.properties"
+    then:
+      field: problem
+      function: truthy
+
+  ap-pattern-solution-required:
+    description: Pattern must have a solution description
+    message: Pattern object must have a solution property
+    severity: warn
+    given: "$.components.schemas.Pattern.properties"
+    then:
+      field: solution
+      function: truthy
+
+  ap-pattern-confidence-enum:
+    description: Pattern confidence must be a valid enum value
+    message: Pattern confidence must be proven, candidate, or experimental
+    severity: error
+    given: "$.components.schemas.Pattern.properties.confidence"
+    then:
+      field: enum
+      function: truthy
+
+  ap-tradeoff-severity-enum:
+    description: Tradeoff severity must be a valid enum value
+    message: Tradeoff severity must be low, medium, or high
+    severity: error
+    given: "$.components.schemas.Tradeoff.properties.severity"
+    then:
+      field: enum
+      function: truthy
+
+  ap-list-responses-have-total:
+    description: List responses must include a total count
+    message: List schema must include a total property
+    severity: warn
+    given: "$.components.schemas[*List].properties"
+    then:
+      field: total
+      function: truthy
+
+  ap-operations-have-tags:
+    description: All API operations must have tags
+    message: Operation must include at least one tag
+    severity: warn
+    given: "$.paths[*][get,post,put,patch,delete]"
+    then:
+      field: tags
+      function: truthy
+
+  ap-operations-have-summary:
+    description: All API operations must have a summary
+    message: Operation must include a summary
+    severity: error
+    given: "$.paths[*][get,post,put,patch,delete]"
+    then:
+      field: summary
+      function: truthy
+
+  ap-operations-have-operation-id:
+    description: All API operations must have an operationId
+    message: Operation must include an operationId
+    severity: error
+    given: "$.paths[*][get,post,put,patch,delete]"
+    then:
+      field: operationId
+      function: truthy
+
+  ap-info-contact-required:
+    description: API info must include contact information
+    message: Info object must have a contact field
+    severity: warn
+    given: "$.info"
+    then:
+      field: contact
+      function: truthy
+
+  ap-servers-defined:
+    description: API must define at least one server
+    message: Servers array must be defined
+    severity: error
+    given: "$"
+    then:
+      field: servers
+      function: truthy

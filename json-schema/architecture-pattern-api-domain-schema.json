@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-domain-schema.json",
+  "title": "Domain",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "patternCount": {
+      "type": "integer"
+    },
+    "subdomains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

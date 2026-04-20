@@ -1,0 +1,29 @@
+vocabulary:
+  name: Architecture Pattern Vocabulary
+  description: Operational vocabulary for the Architecture Pattern API
+  resources:
+    - name: Pattern
+      description: A reusable architecture solution with a clearly stated problem, context, and solution
+    - name: Domain
+      description: A grouping of related architecture patterns by technical or business domain
+    - name: Tradeoff
+      description: A documented benefit or drawback associated with applying an architecture pattern
+  actions:
+    - name: List
+      description: Retrieve a paginated collection of resources
+    - name: Get
+      description: Retrieve a single resource by identifier
+  personas:
+    - name: Software Architect
+      description: Professional making high-level architecture decisions for software systems
+    - name: Engineering Lead
+      description: Technical lead selecting patterns for team implementation
+    - name: Researcher
+      description: Academic or professional studying software architecture patterns and their effectiveness
+  dimensions:
+    - name: Domain Coverage
+      description: Range of technical and business domains covered by the pattern library
+    - name: Confidence Level
+      description: Degree to which a pattern has been proven in production environments
+    - name: Trade-off Clarity
+      description: Transparency of benefits and drawbacks for each architecture pattern

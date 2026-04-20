@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-structure/architecture-pattern-api-tradeoff-list-structure.json",
+  "title": "TradeoffList",
+  "type": "object",
+  "properties": {
+    "total": {
+      "type": "integer"
+    },
+    "tradeoffs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {},
+          "patternId": {},
+          "dimension": {},
+          "benefit": {},
+          "drawback": {},
+          "severity": {},
+          "notes": {}
+        }
+      }
+    }
+  }
+}

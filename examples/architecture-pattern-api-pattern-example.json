@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-pattern-schema.json",
+  "example": {
+    "id": "example-string",
+    "name": "example-string",
+    "domain": "example-string",
+    "description": "example-string",
+    "context": "example-string",
+    "problem": "example-string",
+    "solution": "example-string",
+    "resultingContext": "example-string",
+    "tags": [
+      "example-string"
+    ],
+    "relatedPatterns": [
+      "example-string"
+    ],
+    "externalReferences": [
+      "example-string"
+    ],
+    "confidence": "proven"
+  }
+}

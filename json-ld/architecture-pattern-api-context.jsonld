@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "ap": "https://apievangelist.com/vocab/architecture-pattern#",
+    "schema": "https://schema.org/",
+    "Pattern": "ap:Pattern",
+    "PatternList": "ap:PatternList",
+    "Domain": "ap:Domain",
+    "DomainList": "ap:DomainList",
+    "Tradeoff": "ap:Tradeoff",
+    "TradeoffList": "ap:TradeoffList"
+  }
+}

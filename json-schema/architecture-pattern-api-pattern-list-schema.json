@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-pattern-list-schema.json",
+  "title": "PatternList",
+  "type": "object",
+  "properties": {
+    "total": {
+      "type": "integer"
+    },
+    "offset": {
+      "type": "integer"
+    },
+    "limit": {
+      "type": "integer"
+    },
+    "patterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {},
+          "name": {},
+          "domain": {},
+          "description": {},
+          "context": {},
+          "problem": {},
+          "solution": {},
+          "resultingContext": {},
+          "tags": {},
+          "relatedPatterns": {},
+          "externalReferences": {},
+          "confidence": {}
+        }
+      }
+    }
+  }
+}

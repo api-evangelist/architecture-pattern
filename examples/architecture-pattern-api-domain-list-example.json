@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-domain-list-schema.json",
+  "example": {
+    "total": 42,
+    "domains": [
+      {
+        "id": {},
+        "name": {},
+        "description": {},
+        "patternCount": {},
+        "subdomains": {}
+      }
+    ]
+  }
+}

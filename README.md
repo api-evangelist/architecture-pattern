@@ -1,26 +1,31 @@
-# Architecture Pattern (architecture-pattern)
-Architecture Patterns are specialized technologies or methodologies in the architecture domain that address specific technical or business requirements. They provide targeted capabilities that help practitioners and organizations solve problems and improve outcomes in their area of focus.
+# Architecture Pattern
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/apis.yml)
+Architecture Patterns provide reusable solutions to commonly occurring software and system design problems. They offer proven templates for organizing code, components, and interactions across distributed systems, microservices, cloud-native applications, and enterprise software.
 
-## Scope
+**URL:** https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/apis.yml
 
-- **Type:** Index 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+## Tags
 
-## Tags:
+- Architecture Patterns
+- Software Architecture
+- Design Patterns
+- System Design
+- Microservices
+- Cloud Native
 
- - Architecture Pattern, Architecture Patterns
+## APIs
+
+### Architecture Pattern API
+
+API providing access to a curated reference library of architecture patterns for distributed systems, microservices, cloud-native applications, and enterprise software.
+
+- **Documentation:** https://microservices.io/patterns/
+- **OpenAPI:** https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/openapi/architecture-pattern-api.yaml
 
 ## Timestamps
 
-- **Created:** 2025-01-01 
-- **Modified:** 2026-03-16 
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/api-evangelist)
+- **Created:** 2025-01-01
+- **Modified:** 2026-04-19
 
 ## Maintainers
 

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-tradeoff-list-schema.json",
+  "example": {
+    "total": 42,
+    "tradeoffs": [
+      {
+        "id": {},
+        "patternId": {},
+        "dimension": {},
+        "benefit": {},
+        "drawback": {},
+        "severity": {},
+        "notes": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-structure/architecture-pattern-api-domain-list-structure.json",
+  "title": "DomainList",
+  "type": "object",
+  "properties": {
+    "total": {
+      "type": "integer"
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {},
+          "name": {},
+          "description": {},
+          "patternCount": {},
+          "subdomains": {}
+        }
+      }
+    }
+  }
+}

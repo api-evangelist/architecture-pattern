@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-tradeoff-list-schema.json",
+  "title": "TradeoffList",
+  "type": "object",
+  "properties": {
+    "total": {
+      "type": "integer"
+    },
+    "tradeoffs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {},
+          "patternId": {},
+          "dimension": {},
+          "benefit": {},
+          "drawback": {},
+          "severity": {},
+          "notes": {}
+        }
+      }
+    }
+  }
+}
