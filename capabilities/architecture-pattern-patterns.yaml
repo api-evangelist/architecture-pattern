@@ -1,0 +1,174 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Architecture Pattern API — Patterns
+  description: 'Architecture Pattern API — Patterns. 3 operations. Lead operation: List architecture patterns. Self-contained
+    Naftiko capability covering one Architecture Pattern business surface.'
+  tags:
+  - Architecture Pattern
+  - Patterns
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    ARCHITECTURE_PATTERN_API_KEY: ARCHITECTURE_PATTERN_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: architecture-pattern-patterns
+    baseUri: https://api.apievangelist.com/v1/architecture-patterns
+    description: Architecture Pattern API — Patterns business capability. Self-contained, no shared references.
+    resources:
+    - name: patterns
+      path: /patterns
+      operations:
+      - name: listpatterns
+        method: GET
+        description: List architecture patterns
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: domain
+          in: query
+          type: string
+          description: Filter by pattern domain
+        - name: tag
+          in: query
+          type: string
+        - name: limit
+          in: query
+          type: integer
+        - name: offset
+          in: query
+          type: integer
+    - name: patterns-patternId
+      path: /patterns/{patternId}
+      operations:
+      - name: getpattern
+        method: GET
+        description: Get architecture pattern details
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: patternId
+          in: path
+          type: string
+          description: The unique pattern identifier
+          required: true
+    - name: patterns-patternId-variants
+      path: /patterns/{patternId}/variants
+      operations:
+      - name: getpatternvariants
+        method: GET
+        description: Get variants of an architecture pattern
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: patternId
+          in: path
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: architecture-pattern-patterns-rest
+    port: 8080
+    description: REST adapter for Architecture Pattern API — Patterns. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/patterns
+      name: patterns
+      description: REST surface for patterns.
+      operations:
+      - method: GET
+        name: listpatterns
+        description: List architecture patterns
+        call: architecture-pattern-patterns.listpatterns
+        with:
+          domain: rest.domain
+          tag: rest.tag
+          limit: rest.limit
+          offset: rest.offset
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/patterns/{patternid}
+      name: patterns-patternid
+      description: REST surface for patterns-patternId.
+      operations:
+      - method: GET
+        name: getpattern
+        description: Get architecture pattern details
+        call: architecture-pattern-patterns.getpattern
+        with:
+          patternId: rest.patternId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/patterns/{patternid}/variants
+      name: patterns-patternid-variants
+      description: REST surface for patterns-patternId-variants.
+      operations:
+      - method: GET
+        name: getpatternvariants
+        description: Get variants of an architecture pattern
+        call: architecture-pattern-patterns.getpatternvariants
+        with:
+          patternId: rest.patternId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: architecture-pattern-patterns-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Architecture Pattern API — Patterns. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: list-architecture-patterns
+      description: List architecture patterns
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: architecture-pattern-patterns.listpatterns
+      with:
+        domain: tools.domain
+        tag: tools.tag
+        limit: tools.limit
+        offset: tools.offset
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-architecture-pattern-details
+      description: Get architecture pattern details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: architecture-pattern-patterns.getpattern
+      with:
+        patternId: tools.patternId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-variants-architecture-pattern
+      description: Get variants of an architecture pattern
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: architecture-pattern-patterns.getpatternvariants
+      with:
+        patternId: tools.patternId
+      outputParameters:
+      - type: object
+        mapping: $.

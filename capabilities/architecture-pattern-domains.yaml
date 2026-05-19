@@ -1,0 +1,67 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Architecture Pattern API — Domains
+  description: 'Architecture Pattern API — Domains. 1 operations. Lead operation: List pattern domains. Self-contained Naftiko
+    capability covering one Architecture Pattern business surface.'
+  tags:
+  - Architecture Pattern
+  - Domains
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    ARCHITECTURE_PATTERN_API_KEY: ARCHITECTURE_PATTERN_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: architecture-pattern-domains
+    baseUri: https://api.apievangelist.com/v1/architecture-patterns
+    description: Architecture Pattern API — Domains business capability. Self-contained, no shared references.
+    resources:
+    - name: domains
+      path: /domains
+      operations:
+      - name: listdomains
+        method: GET
+        description: List pattern domains
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: architecture-pattern-domains-rest
+    port: 8080
+    description: REST adapter for Architecture Pattern API — Domains. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/domains
+      name: domains
+      description: REST surface for domains.
+      operations:
+      - method: GET
+        name: listdomains
+        description: List pattern domains
+        call: architecture-pattern-domains.listdomains
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: architecture-pattern-domains-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Architecture Pattern API — Domains. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: list-pattern-domains
+      description: List pattern domains
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: architecture-pattern-domains.listdomains
+      outputParameters:
+      - type: object
+        mapping: $.

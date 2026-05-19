@@ -1,6 +1,8 @@
 aid: architecture-pattern
 name: Architecture Pattern
-description: Architecture Patterns provide reusable solutions to commonly occurring software and system design problems. They offer proven templates for organizing code, components, and interactions across distributed systems, microservices, cloud-native applications, and enterprise software.
+description: Architecture Patterns provide reusable solutions to commonly occurring software and system design problems. They
+  offer proven templates for organizing code, components, and interactions across distributed systems, microservices, cloud-native
+  applications, and enterprise software.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
@@ -12,12 +14,13 @@ tags:
 - Cloud Native
 url: https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/apis.yml
 created: '2025-01-01'
-modified: '2026-04-19'
+modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
 - aid: architecture-pattern:architecture-pattern-api
   name: Architecture Pattern API
-  description: API providing access to a curated reference library of architecture patterns for distributed systems, microservices, cloud-native applications, and enterprise software.
+  description: API providing access to a curated reference library of architecture patterns for distributed systems, microservices,
+    cloud-native applications, and enterprise software.
   humanURL: https://microservices.io/patterns/
   tags:
   - Architecture Patterns
@@ -31,6 +34,12 @@ apis:
     url: https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/openapi/architecture-pattern-api.yaml
   - type: JSONSchema
     url: https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-pattern-schema.json
+  - type: NaftikoCapability
+    url: capabilities/architecture-pattern-domains.yaml
+  - type: NaftikoCapability
+    url: capabilities/architecture-pattern-patterns.yaml
+  - type: NaftikoCapability
+    url: capabilities/architecture-pattern-trade-offs.yaml
 common:
 - type: Portal
   url: https://microservices.io/patterns/
