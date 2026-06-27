@@ -34,11 +34,11 @@ apis:
     url: https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/openapi/architecture-pattern-api.yaml
   - type: JSONSchema
     url: https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-pattern-schema.json
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/architecture-pattern-domains.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/architecture-pattern-patterns.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/architecture-pattern-trade-offs.yaml
 common:
 - type: Portal
