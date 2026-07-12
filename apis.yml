@@ -41,10 +41,14 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/architecture-pattern-trade-offs.yaml
 common:
+- type: DomainSecurity
+  url: security/architecture-pattern-domain-security.yml
 - type: Portal
   url: https://microservices.io/patterns/
 - type: Documentation
   url: https://microservices.io/patterns/
+- type: Blog
+  url: https://microservices.io/feed.xml
 - type: GitHubOrganization
   url: https://github.com/api-evangelist
 - type: Features
