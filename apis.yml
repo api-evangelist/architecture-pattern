@@ -41,6 +41,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/architecture-pattern-trade-offs.yaml
 common:
+- type: AgenticAccess
+  url: agentic-access/architecture-pattern-agentic-access.yml
 - type: DomainSecurity
   url: security/architecture-pattern-domain-security.yml
 - type: Portal
