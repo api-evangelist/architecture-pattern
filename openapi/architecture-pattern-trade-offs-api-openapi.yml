@@ -1,0 +1,65 @@
+openapi: 3.0.3
+info:
+  title: Architecture Pattern Domains Trade-offs API
+  description: API providing access to a curated reference library of architecture patterns for distributed systems, microservices, cloud-native applications, and enterprise software.
+  version: 1.0.0
+  contact:
+    name: API Evangelist
+    url: https://apievangelist.com
+servers:
+- url: https://api.apievangelist.com/v1/architecture-patterns
+  description: Production
+tags:
+- name: Trade-offs
+paths:
+  /tradeoffs:
+    get:
+      summary: List pattern trade-offs
+      operationId: listTradeoffs
+      tags:
+      - Trade-offs
+      parameters:
+      - name: patternId
+        in: query
+        description: Filter trade-offs by pattern
+        schema:
+          type: string
+      responses:
+        '200':
+          description: List of trade-offs
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TradeoffList'
+components:
+  schemas:
+    TradeoffList:
+      type: object
+      properties:
+        total:
+          type: integer
+        tradeoffs:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tradeoff'
+    Tradeoff:
+      type: object
+      properties:
+        id:
+          type: string
+        patternId:
+          type: string
+        dimension:
+          type: string
+        benefit:
+          type: string
+        drawback:
+          type: string
+        severity:
+          type: string
+          enum:
+          - low
+          - medium
+          - high
+        notes:
+          type: string

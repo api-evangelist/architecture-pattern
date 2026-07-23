@@ -1,0 +1,53 @@
+openapi: 3.0.3
+info:
+  title: Architecture Pattern Domains API
+  description: API providing access to a curated reference library of architecture patterns for distributed systems, microservices, cloud-native applications, and enterprise software.
+  version: 1.0.0
+  contact:
+    name: API Evangelist
+    url: https://apievangelist.com
+servers:
+- url: https://api.apievangelist.com/v1/architecture-patterns
+  description: Production
+tags:
+- name: Domains
+paths:
+  /domains:
+    get:
+      summary: List pattern domains
+      operationId: listDomains
+      tags:
+      - Domains
+      responses:
+        '200':
+          description: List of pattern domains
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DomainList'
+components:
+  schemas:
+    DomainList:
+      type: object
+      properties:
+        total:
+          type: integer
+        domains:
+          type: array
+          items:
+            $ref: '#/components/schemas/Domain'
+    Domain:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        patternCount:
+          type: integer
+        subdomains:
+          type: array
+          items:
+            type: string
