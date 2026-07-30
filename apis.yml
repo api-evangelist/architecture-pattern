@@ -4,7 +4,19 @@ description: Architecture Patterns provide reusable solutions to commonly occurr
   offer proven templates for organizing code, components, and interactions across distributed systems, microservices, cloud-native
   applications, and enterprise software.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/architecture-pattern.png
 tags:
 - Architecture Patterns
 - Software Architecture
@@ -17,23 +29,60 @@ created: '2025-01-01'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-- aid: architecture-pattern:architecture-pattern-api
-  name: Architecture Pattern API
-  description: API providing access to a curated reference library of architecture patterns for distributed systems, microservices,
-    cloud-native applications, and enterprise software.
+- aid: architecture-pattern:architecture-pattern-domains-api
+  name: Architecture Pattern Domains API
+  description: The Domains API from Architecture Pattern — 1 operation(s) for domains.
   humanURL: https://microservices.io/patterns/
   tags:
-  - Architecture Patterns
-  - Reference Library
-  - Microservices
-  - Cloud Native
+  - Domains
   properties:
+  - type: OpenAPI
+    url: openapi/architecture-pattern-domains-api-openapi.yml
   - type: Documentation
     url: https://microservices.io/patterns/
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/openapi/architecture-pattern-api.yaml
   - type: JSONSchema
-    url: https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-pattern-schema.json
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-pattern-schema.json
+  - type: X-NaftikoCapability
+    url: capabilities/architecture-pattern-domains.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/architecture-pattern-patterns.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/architecture-pattern-trade-offs.yaml
+- aid: architecture-pattern:architecture-pattern-patterns-api
+  name: Architecture Pattern Patterns API
+  description: The Patterns API from Architecture Pattern — 3 operation(s) for patterns.
+  humanURL: https://microservices.io/patterns/
+  tags:
+  - Patterns
+  properties:
+  - type: OpenAPI
+    url: openapi/architecture-pattern-patterns-api-openapi.yml
+  - type: Documentation
+    url: https://microservices.io/patterns/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-pattern-schema.json
+  - type: X-NaftikoCapability
+    url: capabilities/architecture-pattern-domains.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/architecture-pattern-patterns.yaml
+  - type: X-NaftikoCapability
+    url: capabilities/architecture-pattern-trade-offs.yaml
+- aid: architecture-pattern:architecture-pattern-trade-offs-api
+  name: Architecture Pattern Trade-offs API
+  description: The Trade-offs API from Architecture Pattern — 1 operation(s) for trade-offs.
+  humanURL: https://microservices.io/patterns/
+  tags:
+  - Trade-offs
+  properties:
+  - type: OpenAPI
+    url: openapi/architecture-pattern-trade-offs-api-openapi.yml
+  - type: Documentation
+    url: https://microservices.io/patterns/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-pattern-schema.json
   - type: X-NaftikoCapability
     url: capabilities/architecture-pattern-domains.yaml
   - type: X-NaftikoCapability
