@@ -1,0 +1,214 @@
+openapi: 3.0.3
+info:
+  title: Architecture Pattern API
+  description: API providing access to a curated reference library of architecture patterns for distributed systems, microservices, cloud-native applications, and enterprise software.
+  version: 1.0.0
+  contact:
+    name: API Evangelist
+    url: https://apievangelist.com
+servers:
+  - url: https://api.apievangelist.com/v1/architecture-patterns
+    description: Production
+paths:
+  /patterns:
+    get:
+      summary: List architecture patterns
+      operationId: listPatterns
+      tags: [Patterns]
+      parameters:
+        - name: domain
+          in: query
+          description: Filter by pattern domain
+          schema:
+            type: string
+            enum: [microservices, distributed-systems, cloud-native, enterprise, data, messaging, security]
+        - name: tag
+          in: query
+          schema:
+            type: string
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            default: 0
+      responses:
+        '200':
+          description: List of architecture patterns
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatternList'
+  /patterns/{patternId}:
+    get:
+      summary: Get architecture pattern details
+      operationId: getPattern
+      tags: [Patterns]
+      parameters:
+        - name: patternId
+          in: path
+          required: true
+          description: The unique pattern identifier
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Pattern details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pattern'
+        '404':
+          description: Pattern not found
+  /patterns/{patternId}/variants:
+    get:
+      summary: Get variants of an architecture pattern
+      operationId: getPatternVariants
+      tags: [Patterns]
+      parameters:
+        - name: patternId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Pattern variants
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatternList'
+  /domains:
+    get:
+      summary: List pattern domains
+      operationId: listDomains
+      tags: [Domains]
+      responses:
+        '200':
+          description: List of pattern domains
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DomainList'
+  /tradeoffs:
+    get:
+      summary: List pattern trade-offs
+      operationId: listTradeoffs
+      tags: [Trade-offs]
+      parameters:
+        - name: patternId
+          in: query
+          description: Filter trade-offs by pattern
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of trade-offs
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TradeoffList'
+components:
+  schemas:
+    Pattern:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        domain:
+          type: string
+        description:
+          type: string
+        context:
+          type: string
+        problem:
+          type: string
+        solution:
+          type: string
+        resultingContext:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        relatedPatterns:
+          type: array
+          items:
+            type: string
+        externalReferences:
+          type: array
+          items:
+            type: string
+        confidence:
+          type: string
+          enum: [proven, candidate, experimental]
+    PatternList:
+      type: object
+      properties:
+        total:
+          type: integer
+        offset:
+          type: integer
+        limit:
+          type: integer
+        patterns:
+          type: array
+          items:
+            $ref: '#/components/schemas/Pattern'
+    Domain:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        patternCount:
+          type: integer
+        subdomains:
+          type: array
+          items:
+            type: string
+    DomainList:
+      type: object
+      properties:
+        total:
+          type: integer
+        domains:
+          type: array
+          items:
+            $ref: '#/components/schemas/Domain'
+    Tradeoff:
+      type: object
+      properties:
+        id:
+          type: string
+        patternId:
+          type: string
+        dimension:
+          type: string
+        benefit:
+          type: string
+        drawback:
+          type: string
+        severity:
+          type: string
+          enum: [low, medium, high]
+        notes:
+          type: string
+    TradeoffList:
+      type: object
+      properties:
+        total:
+          type: integer
+        tradeoffs:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tradeoff'

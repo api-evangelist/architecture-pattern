@@ -1,0 +1,18 @@
+{
+  "provider": "architecture-pattern",
+  "sources": [
+    "architecture-pattern-domains-api-openapi.yml",
+    "architecture-pattern-patterns-api-openapi.yml",
+    "architecture-pattern-trade-offs-api-openapi.yml"
+  ],
+  "outputs": [
+    "architecture-pattern-domains-api-openapi.yml",
+    "architecture-pattern-patterns-api-openapi.yml",
+    "architecture-pattern-trade-offs-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
