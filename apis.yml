@@ -43,12 +43,6 @@ apis:
   - type: JSONSchema
     url: >-
       https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-pattern-schema.json
-  - type: X-NaftikoCapability
-    url: capabilities/architecture-pattern-domains.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/architecture-pattern-patterns.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/architecture-pattern-trade-offs.yaml
 - aid: architecture-pattern:architecture-pattern-patterns-api
   name: Architecture Pattern Patterns API
   description: The Patterns API from Architecture Pattern — 3 operation(s) for patterns.
@@ -63,12 +57,6 @@ apis:
   - type: JSONSchema
     url: >-
       https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-pattern-schema.json
-  - type: X-NaftikoCapability
-    url: capabilities/architecture-pattern-domains.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/architecture-pattern-patterns.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/architecture-pattern-trade-offs.yaml
 - aid: architecture-pattern:architecture-pattern-trade-offs-api
   name: Architecture Pattern Trade-offs API
   description: The Trade-offs API from Architecture Pattern — 1 operation(s) for trade-offs.
@@ -83,12 +71,6 @@ apis:
   - type: JSONSchema
     url: >-
       https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/json-schema/architecture-pattern-api-pattern-schema.json
-  - type: X-NaftikoCapability
-    url: capabilities/architecture-pattern-domains.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/architecture-pattern-patterns.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/architecture-pattern-trade-offs.yaml
 common:
 - type: AgenticAccess
   url: agentic-access/architecture-pattern-agentic-access.yml
