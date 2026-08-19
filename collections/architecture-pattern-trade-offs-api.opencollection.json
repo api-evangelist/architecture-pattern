@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Architecture Pattern Domains Trade-offs API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Trade-offs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List pattern trade-offs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.apievangelist.com/v1/architecture-patterns/tradeoffs",
+            "params": [
+              {
+                "name": "patternId",
+                "value": "",
+                "type": "query",
+                "description": "Filter trade-offs by pattern"
+              }
+            ]
+          },
+          "docs": "List pattern trade-offs"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

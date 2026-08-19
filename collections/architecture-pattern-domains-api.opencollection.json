@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Architecture Pattern Domains API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Domains",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List pattern domains",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.apievangelist.com/v1/architecture-patterns/domains"
+          },
+          "docs": "List pattern domains"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,111 @@
+{
+  "item": [
+    {
+      "id": "e00ba79d-394e-41df-afe1-562d24540448",
+      "name": "Trade-offs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e4aeefe7-9d54-4cd4-bef9-2773ce586bba",
+          "name": "List pattern trade-offs",
+          "request": {
+            "name": "List pattern trade-offs",
+            "description": {},
+            "url": {
+              "path": [
+                "tradeoffs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "patternId",
+                  "value": "<string>",
+                  "description": "Filter trade-offs by pattern"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "237d47a1-efb9-458e-920c-83666bb91b21",
+              "name": "List of trade-offs",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tradeoffs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "patternId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total\": 3937,\n  \"tradeoffs\": [\n    {\n      \"id\": \"string\",\n      \"patternId\": \"string\",\n      \"dimension\": \"string\",\n      \"benefit\": \"string\",\n      \"drawback\": \"string\",\n      \"severity\": \"medium\",\n      \"notes\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"patternId\": \"string\",\n      \"dimension\": \"string\",\n      \"benefit\": \"string\",\n      \"drawback\": \"string\",\n      \"severity\": \"high\",\n      \"notes\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.apievangelist.com/v1/architecture-patterns",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "750f93b9-a003-4a28-8985-49551df8c1f2",
+    "name": "Architecture Pattern Domains Trade-offs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API providing access to a curated reference library of architecture patterns for distributed systems, microservices, cloud-native applications, and enterprise software.\n\nContact Support:\n Name: API Evangelist",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Architecture Pattern Domains Patterns API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Patterns",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List architecture patterns",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.apievangelist.com/v1/architecture-patterns/patterns",
+            "params": [
+              {
+                "name": "domain",
+                "value": "",
+                "type": "query",
+                "description": "Filter by pattern domain"
+              },
+              {
+                "name": "tag",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List architecture patterns"
+        },
+        {
+          "info": {
+            "name": "Get architecture pattern details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.apievangelist.com/v1/architecture-patterns/patterns/:patternId",
+            "params": [
+              {
+                "name": "patternId",
+                "value": "",
+                "type": "path",
+                "description": "The unique pattern identifier"
+              }
+            ]
+          },
+          "docs": "Get architecture pattern details"
+        },
+        {
+          "info": {
+            "name": "Get variants of an architecture pattern",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.apievangelist.com/v1/architecture-patterns/patterns/:patternId/variants",
+            "params": [
+              {
+                "name": "patternId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get variants of an architecture pattern"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,348 @@
+{
+  "item": [
+    {
+      "id": "76037d0e-6ea4-422a-ac88-8cfc6e38f021",
+      "name": "Patterns",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "12accebc-0590-4ab8-8b44-2c15cf467c1f",
+          "name": "List architecture patterns",
+          "request": {
+            "name": "List architecture patterns",
+            "description": {},
+            "url": {
+              "path": [
+                "patterns"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "domain",
+                  "value": "<string>",
+                  "description": "Filter by pattern domain"
+                },
+                {
+                  "disabled": false,
+                  "key": "tag",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8e380df3-e442-4b36-a8d1-037a06135b9c",
+              "name": "List of architecture patterns",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "patterns"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "domain",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tag",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total\": 1391,\n  \"offset\": 1526,\n  \"limit\": 3845,\n  \"patterns\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"domain\": \"string\",\n      \"description\": \"string\",\n      \"context\": \"string\",\n      \"problem\": \"string\",\n      \"solution\": \"string\",\n      \"resultingContext\": \"string\",\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ],\n      \"relatedPatterns\": [\n        \"string\",\n        \"string\"\n      ],\n      \"externalReferences\": [\n        \"string\",\n        \"string\"\n      ],\n      \"confidence\": \"proven\"\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"domain\": \"string\",\n      \"description\": \"string\",\n      \"context\": \"string\",\n      \"problem\": \"string\",\n      \"solution\": \"string\",\n      \"resultingContext\": \"string\",\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ],\n      \"relatedPatterns\": [\n        \"string\",\n        \"string\"\n      ],\n      \"externalReferences\": [\n        \"string\",\n        \"string\"\n      ],\n      \"confidence\": \"experimental\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6da59f9a-cac2-4950-a41f-354990ba4d8b",
+          "name": "Get architecture pattern details",
+          "request": {
+            "name": "Get architecture pattern details",
+            "description": {},
+            "url": {
+              "path": [
+                "patterns",
+                ":patternId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "patternId",
+                  "description": "(Required) The unique pattern identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "da5b6a6b-83c7-4407-bb55-e73c1c31a336",
+              "name": "Pattern details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "patterns",
+                    ":patternId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "patternId",
+                      "description": "(Required) The unique pattern identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"domain\": \"string\",\n  \"description\": \"string\",\n  \"context\": \"string\",\n  \"problem\": \"string\",\n  \"solution\": \"string\",\n  \"resultingContext\": \"string\",\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ],\n  \"relatedPatterns\": [\n    \"string\",\n    \"string\"\n  ],\n  \"externalReferences\": [\n    \"string\",\n    \"string\"\n  ],\n  \"confidence\": \"experimental\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0d0ad4c8-0d9d-4312-ae4e-521a3c5358f7",
+              "name": "Pattern not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "patterns",
+                    ":patternId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "patternId",
+                      "description": "(Required) The unique pattern identifier"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a0fd8e6c-28b7-47a4-a8e1-cd168ec5b675",
+          "name": "Get variants of an architecture pattern",
+          "request": {
+            "name": "Get variants of an architecture pattern",
+            "description": {},
+            "url": {
+              "path": [
+                "patterns",
+                ":patternId",
+                "variants"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "patternId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "575714ac-f375-42c2-8fca-45b3c1087cd6",
+              "name": "Pattern variants",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "patterns",
+                    ":patternId",
+                    "variants"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "patternId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total\": 4228,\n  \"offset\": 5241,\n  \"limit\": 5083,\n  \"patterns\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"domain\": \"string\",\n      \"description\": \"string\",\n      \"context\": \"string\",\n      \"problem\": \"string\",\n      \"solution\": \"string\",\n      \"resultingContext\": \"string\",\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ],\n      \"relatedPatterns\": [\n        \"string\",\n        \"string\"\n      ],\n      \"externalReferences\": [\n        \"string\",\n        \"string\"\n      ],\n      \"confidence\": \"experimental\"\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"domain\": \"string\",\n      \"description\": \"string\",\n      \"context\": \"string\",\n      \"problem\": \"string\",\n      \"solution\": \"string\",\n      \"resultingContext\": \"string\",\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ],\n      \"relatedPatterns\": [\n        \"string\",\n        \"string\"\n      ],\n      \"externalReferences\": [\n        \"string\",\n        \"string\"\n      ],\n      \"confidence\": \"candidate\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.apievangelist.com/v1/architecture-patterns",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "af851b6f-50ea-43c2-a125-b6226be8d85b",
+    "name": "Architecture Pattern Domains Patterns API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API providing access to a curated reference library of architecture patterns for distributed systems, microservices, cloud-native applications, and enterprise software.\n\nContact Support:\n Name: API Evangelist",
+      "type": "text/plain"
+    }
+  }
+}
