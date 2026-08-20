@@ -23,6 +23,13 @@ tags:
 - Design Patterns
 - System Design
 - Microservices
+- Cloud-Native
+tags_raw:
+- Architecture Patterns
+- Software Architecture
+- Design Patterns
+- System Design
+- Microservices
 - Cloud Native
 url: https://raw.githubusercontent.com/api-evangelist/architecture-pattern/refs/heads/main/apis.yml
 created: '2025-01-01'
