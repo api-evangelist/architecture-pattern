@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Architecture Pattern Domains Trade-offs API
+  title: Architecture Pattern Trade Offs API
   description: API providing access to a curated reference library of architecture patterns for distributed systems, microservices, cloud-native applications, and enterprise software.
   version: 1.0.0
   contact:

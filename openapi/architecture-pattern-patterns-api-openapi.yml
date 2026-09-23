@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Architecture Pattern Domains Patterns API
+  title: Architecture Pattern Patterns API
   description: API providing access to a curated reference library of architecture patterns for distributed systems, microservices, cloud-native applications, and enterprise software.
   version: 1.0.0
   contact:
@@ -96,6 +96,19 @@ paths:
                 $ref: '#/components/schemas/PatternList'
 components:
   schemas:
+    PatternList:
+      type: object
+      properties:
+        total:
+          type: integer
+        offset:
+          type: integer
+        limit:
+          type: integer
+        patterns:
+          type: array
+          items:
+            $ref: '#/components/schemas/Pattern'
     Pattern:
       type: object
       properties:
@@ -133,16 +146,3 @@ components:
           - proven
           - candidate
           - experimental
-    PatternList:
-      type: object
-      properties:
-        total:
-          type: integer
-        offset:
-          type: integer
-        limit:
-          type: integer
-        patterns:
-          type: array
-          items:
-            $ref: '#/components/schemas/Pattern'

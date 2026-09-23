@@ -1,9 +1,7 @@
 {
   "provider": "architecture-pattern",
   "sources": [
-    "architecture-pattern-domains-api-openapi.yml",
-    "architecture-pattern-patterns-api-openapi.yml",
-    "architecture-pattern-trade-offs-api-openapi.yml"
+    "_original/architecture-pattern-api.yaml"
   ],
   "outputs": [
     "architecture-pattern-domains-api-openapi.yml",
@@ -13,6 +11,17 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "architecture-pattern-api.yaml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "architecture-pattern-api.yaml: declared missing tag: Domains",
+    "architecture-pattern-api.yaml: declared missing tag: Patterns",
+    "architecture-pattern-api.yaml: declared missing tag: Trade-offs",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "architecture-pattern-domains-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "architecture-pattern-patterns-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "architecture-pattern-trade-offs-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
