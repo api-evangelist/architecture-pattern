@@ -96,6 +96,19 @@ paths:
                 $ref: '#/components/schemas/PatternList'
 components:
   schemas:
+    PatternList:
+      type: object
+      properties:
+        total:
+          type: integer
+        offset:
+          type: integer
+        limit:
+          type: integer
+        patterns:
+          type: array
+          items:
+            $ref: '#/components/schemas/Pattern'
     Pattern:
       type: object
       properties:
@@ -133,16 +146,3 @@ components:
           - proven
           - candidate
           - experimental
-    PatternList:
-      type: object
-      properties:
-        total:
-          type: integer
-        offset:
-          type: integer
-        limit:
-          type: integer
-        patterns:
-          type: array
-          items:
-            $ref: '#/components/schemas/Pattern'

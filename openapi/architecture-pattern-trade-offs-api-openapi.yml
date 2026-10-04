@@ -33,6 +33,15 @@ paths:
                 $ref: '#/components/schemas/TradeoffList'
 components:
   schemas:
+    TradeoffList:
+      type: object
+      properties:
+        total:
+          type: integer
+        tradeoffs:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tradeoff'
     Tradeoff:
       type: object
       properties:
@@ -54,12 +63,3 @@ components:
           - high
         notes:
           type: string
-    TradeoffList:
-      type: object
-      properties:
-        total:
-          type: integer
-        tradeoffs:
-          type: array
-          items:
-            $ref: '#/components/schemas/Tradeoff'

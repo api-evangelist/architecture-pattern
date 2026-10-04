@@ -27,6 +27,15 @@ paths:
                 $ref: '#/components/schemas/DomainList'
 components:
   schemas:
+    DomainList:
+      type: object
+      properties:
+        total:
+          type: integer
+        domains:
+          type: array
+          items:
+            $ref: '#/components/schemas/Domain'
     Domain:
       type: object
       properties:
@@ -42,12 +51,3 @@ components:
           type: array
           items:
             type: string
-    DomainList:
-      type: object
-      properties:
-        total:
-          type: integer
-        domains:
-          type: array
-          items:
-            $ref: '#/components/schemas/Domain'
