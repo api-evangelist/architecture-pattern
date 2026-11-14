@@ -5,6 +5,12 @@ artifacts:
   agentic-access/architecture-pattern-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
   collections/architecture-pattern-domains-api.opencollection.json:
     method: derived
     evidence: openapi/architecture-pattern-domains-api
